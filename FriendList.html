@@ -11,6 +11,11 @@
 		<!--第一步：請先在此加入Facebook應用程式開發所需要的的資源，請參考 https://developers.facebook.com/docs/reference/javascript/ -->
 		<div id="fb-root"></div>
 		<script>
+		var defaultPath = "FriendList.html";
+		var uid;
+		var Access_Token;
+		var GroupID = new Array;
+		var GroupMember = new Array;
 		window.fbAsyncInit = function() {
 		    // init the FB JS SDK
 		    FB.init({
