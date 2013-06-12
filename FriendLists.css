@@ -7,7 +7,7 @@ body{
 	margin:0px auto;
 	width:250px;
 	text-align:left;
-	height:93%;
+	height:100%;
 	border:1px solid;
 }
 		
@@ -18,7 +18,7 @@ body{
 	padding:0px;
 }
 		
-#FriendList ul div{
+#FriendList ul li{
 	background:#3b5998;
 	margin-bottom:1px;
 	color:#FFFFFF;
@@ -34,7 +34,7 @@ body{
 	font-size:12px;
 }
 			
-#FriendList ul div:hover{
+#FriendList ul li:hover{
 	background:#DFDFDF;
 	color:#3b5998;
 	cursor:hand;
