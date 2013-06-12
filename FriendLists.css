@@ -1,0 +1,55 @@
+body{
+  font-family:sans-serif;
+}
+
+#FriendList{
+	float:left;
+	margin:0px auto;
+	width:250px;
+	text-align:left;
+	height:93%;
+	border:1px solid;
+}
+		
+#FriendList ul{
+	overflow:auto;
+	height:100%;
+	margin:0px;
+	padding:0px;
+}
+		
+#FriendList ul div{
+	background:#3b5998;
+	margin-bottom:1px;
+	color:#FFFFFF;
+}
+			
+#FriendList img{
+	margin-top:4px;
+	margin-left:3px;
+}
+			
+#FriendList span{
+	float:right;
+	font-size:12px;
+}
+			
+#FriendList ul div:hover{
+	background:#DFDFDF;
+	color:#3b5998;
+	cursor:hand;
+}
+			
+#infoDiv{
+	float:left;
+	width:200px;
+	height:100%;
+	position:relative;
+}
+
+#infoDiv span:nth-child(1){
+	margin-top:50px;
+}
+
+#infoDiv span{
+	display: block;
