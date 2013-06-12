@@ -11,7 +11,7 @@ function(response){
 		$("<div onclick='changeInfo("+fId+");'><img src='https://graph.facebook.com/"+ fId + "/picture' /><span>"+fName+"</span></div>").appendTo("#FillInList");
 
 		i++;
-	}
+	};
 }
 
 
