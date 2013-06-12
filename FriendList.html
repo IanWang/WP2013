@@ -163,20 +163,6 @@
 				$(".sortB").sortable({
 					tolerance: "pointer",
 					connectWith: ".sortA"
-					receive: function(event, ui) {
-						var warning = window.confirm("Are you sure to remove this friend from the list? This will remove from the real list in the facebook and cannot be recovered.");
-						if(warning){
-							var $item = $( this );
-							
-							$item.find("div").remove();
-							
-						}else{
-							var $item = $( this );
-							
-							$item.find("div").remove();
-							
-						}
-					}
 				});
 				
 				getMembers(num+1);
