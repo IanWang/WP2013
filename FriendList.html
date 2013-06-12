@@ -5,10 +5,11 @@
 	<link rel="stylesheet" type="text/css" href="FriendLists.css"/>
 	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 	<script>
 		$(document).ready(function() {
-			$("#FriendList").sortable({
-				connectWith:".connectSort",
+			$(".sprtA").sortable({
+				connectWith:".sortB",
 				tolerance: "pointer"
 			});
 		});
@@ -158,6 +159,25 @@
 						
 					a++;
 				}
+							
+				$(".sortB").sortable({
+					tolerance: "pointer",
+					connectWith: ".sortA"
+					receive: function(event, ui) {
+						var warning = window.confirm("Are you sure to remove this friend from the list? This will remove from the real list in the facebook and cannot be recovered.");
+						if(warning){
+							var $item = $( this );
+							
+							$item.find("div").remove();
+							
+						}else{
+							var $item = $( this );
+							
+							$item.find("div").remove();
+							
+						}
+					}
+				});
 				
 				getMembers(num+1);
 				
@@ -178,7 +198,7 @@
 		</script>
 			<div id="FriendList">
 				<h1>Your Friends</h1>
-				<ul id="FillInList">
+				<ul id="FillInList" class="sortA">
 				</ul>
 			</div>
 			<div id="infoDiv">
@@ -187,7 +207,7 @@
 				<span>生日：</span><span id="birth"></span><br/>
 				<span>住處：</span><span id="loca"></span><br/>
 			</div>
-			<div id="GroupList">
+			<div id="GroupList" class="sortB">
 			</div>
 	</body>
 </html>
